@@ -6,16 +6,22 @@
 package br.udesc.prog2.models;
 
 public abstract class Pessoa implements Comparable<Pessoa> {
-    private String nome;
-    private String sobrenome;
+    protected String nome;
+    protected String sobrenome;
     protected String email;
     protected String telefone;
     protected String senha;
 
-    public Pessoa(String nome, String sobrenome, String email, String senha) {
+    public Pessoa(String nome) {
         this.nome = nome;
-        this.sobrenome = sobrenome;
+       
+    }
+
+    public void setEmail(String email) {
         this.email = email;
+    }
+
+    public void setSenha(String senha) {
         this.senha = senha;
     }
 

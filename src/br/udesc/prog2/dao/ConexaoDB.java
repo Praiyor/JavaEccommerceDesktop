@@ -35,7 +35,7 @@ public class ConexaoDB {
     }
     
         public static void desconectarDB() {
-        if(conexao == null) {
+        if(conexao != null) {
             try {
                 conexao.close();
             } catch(SQLException ex) {

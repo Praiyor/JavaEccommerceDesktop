@@ -18,34 +18,27 @@ import java.util.logging.Logger;
 public class Cliente extends Pessoa {
     private Date dataNascimento;
     private String cpf;
-    private String rua;
     private int cep;
-    private String complemento;
-    private String estado;
-    private String cidade;
-    private int numero;
     
-    public Cliente(String nome, String sobrenome, String email, String senha) {
-        super(nome, sobrenome, email, senha);
+    public Cliente(String nome) {
+        super(nome);
     }
-    
-    public Cliente(String nome, String sobrenome, String email, String senha, Date dataNascimento, String rua, int cep, String complemento, String estado, String cidade, int numero, String cpf) {
-        super(nome, sobrenome, email, senha);
-        this.cpf = cpf;
+
+    public void setDataNascimento(Date dataNascimento) {
         this.dataNascimento = dataNascimento;
-        this.rua = rua;
-        this.cep = cep;
-        this.complemento = complemento;
-        this.estado = estado;
-        this.cidade = cidade;
-        this.numero = numero;
-
     }
 
-   
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+  
 
     public Date getDataNascimento() {
         return dataNascimento;
+    }
+    
+    public String getNome(){
+        return this.nome;
     }
     
      
@@ -53,14 +46,6 @@ public class Cliente extends Pessoa {
         return this.cpf;
     }
     
-    
-    public String getRua() {
-        return rua;
-    }
-
-    public void setRua(String rua) {
-        this.rua = rua;
-    }
 
     public int getCep() {
         return cep;
@@ -70,38 +55,7 @@ public class Cliente extends Pessoa {
         this.cep = cep;
     }
 
-    public String getComplemento() {
-        return complemento;
-    }
-
-    public void setComplemento(String complemento) {
-        this.complemento = complemento;
-    }
-
-    public String getEstado() {
-        return estado;
-    }
-
-    public void setEstado(String estado) {
-        this.estado = estado;
-    }
-
-    public String getCidade() {
-        return cidade;
-    }
-
-    public void setCidade(String cidade) {
-        this.cidade = cidade;
-    }
-
-    public int getNumero() {
-        return numero;
-    }
-
-    public void setNumero(int numero) {
-        this.numero = numero;
-    }
-
+ 
     @Override
     public void setTelefone(String telefone) {
         String pattern = "^\\([1-9]{2}\\)(?:[2-8]|9[1-9])[0-9]{3}\\-[0-9]{4}$";    

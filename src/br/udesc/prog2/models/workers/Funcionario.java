@@ -23,10 +23,10 @@ public class Funcionario extends Pessoa{
     
     
     public Funcionario(String nome, String sobrenome, String email, String senha) {
-        super(nome, sobrenome, email, senha);
+        super(nome);
     }
     public Funcionario(String nome, String sobrenome, String email, String senha, Cargo cargo, int salario, int privilegio) {
-        super(nome, sobrenome, email, senha);
+        super(nome);
         
         this.cargo.put(String.valueOf(cargo.getId()), cargo);
         this.salario = salario;
