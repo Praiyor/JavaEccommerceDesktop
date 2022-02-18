@@ -5,7 +5,9 @@
  */
 package br.udesc.prog2.views.workers;
 
+import br.udesc.prog2.model.tabel.ComponenteTableModel;
 import java.awt.event.ActionListener;
+import javax.swing.event.TableModelListener;
 
 /**
  *
@@ -19,6 +21,9 @@ public class MontarPcView extends javax.swing.JFrame {
     public MontarPcView() {
         initComponents();
     }
+    public void setTableModel(ComponenteTableModel ComponenteTableModel){
+        jTable.setModel(ComponenteTableModel);
+    }
     
     public void adicionarAcaoBtnCriarPcs(ActionListener acao){
         btnCriarPcs.addActionListener(acao);
@@ -28,6 +33,19 @@ public class MontarPcView extends javax.swing.JFrame {
     }
     public void adicionarAcaoBtnExcluirItem(ActionListener acao){
         btnExcluirItem.addActionListener(acao);
+    }
+    
+     public String getNomeLinhaSelecionada(){
+        if(jTable.getSelectedRow() == -1){
+            System.out.println("Nenhuma Linha selecionada");
+            return null;
+        }
+        
+         return jTable.getModel().getValueAt(jTable.getSelectedRow(), 0).toString();
+     }
+     
+      public void adicionarEventoAlteracaoTabela(TableModelListener l){
+        jTable.getModel().addTableModelListener(l);
     }
 
     /**
@@ -40,14 +58,14 @@ public class MontarPcView extends javax.swing.JFrame {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        jTable = new javax.swing.JTable();
         btnExcluirItem = new javax.swing.JButton();
         btnCriarComponentes = new javax.swing.JButton();
         btnCriarPcs = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        jTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -58,7 +76,7 @@ public class MontarPcView extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(jTable);
 
         btnExcluirItem.setText("Excluir item");
 
@@ -148,6 +166,6 @@ public class MontarPcView extends javax.swing.JFrame {
     private javax.swing.JButton btnCriarPcs;
     private javax.swing.JButton btnExcluirItem;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTable jTable;
     // End of variables declaration//GEN-END:variables
 }
