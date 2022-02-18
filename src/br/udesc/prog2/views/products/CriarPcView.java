@@ -5,6 +5,7 @@
  */
 package br.udesc.prog2.views.products;
 
+import br.udesc.prog2.dao.ClienteDAO;
 import br.udesc.prog2.models.workers.Cliente;
 import java.awt.event.ActionListener;
 import java.util.List;
@@ -22,8 +23,8 @@ public class CriarPcView extends javax.swing.JFrame {
     public CriarPcView() {
         initComponents();
     }
-    public void popularClientes(List<Cliente> clientes){
-        for(Cliente c: clientes){
+    public void popularClientes(List<ClienteDAO> clientes){
+        for(ClienteDAO c: clientes){
             cbCliente.addItem(c);
         }
     }
@@ -80,8 +81,6 @@ public class CriarPcView extends javax.swing.JFrame {
                 edNomeActionPerformed(evt);
             }
         });
-
-        cbCliente.setSelectedIndex(-1);
 
         btnCriarPc.setText("Salvar PC");
 
@@ -167,7 +166,7 @@ public class CriarPcView extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCriarPc;
-    private javax.swing.JComboBox<Cliente> cbCliente;
+    private javax.swing.JComboBox<ClienteDAO> cbCliente;
     private javax.swing.JTextField edNome;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

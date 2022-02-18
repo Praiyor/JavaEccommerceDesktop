@@ -76,7 +76,7 @@
         </Property>
       </Properties>
       <AuxValues>
-        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;Cliente&gt;"/>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;ClienteDAO&gt;"/>
       </AuxValues>
     </Component>
     <Component class="javax.swing.JButton" name="btnCriarPc">

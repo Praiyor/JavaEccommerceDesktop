@@ -5,6 +5,7 @@
  */
 package br.udesc.prog2.views.products;
 
+import br.udesc.prog2.dao.PcDAO;
 import br.udesc.prog2.models.products.Pc;
 import java.awt.event.ActionListener;
 import java.util.List;
@@ -23,8 +24,8 @@ public class CriarComponenteView extends javax.swing.JFrame {
         initComponents();
     }
     
-    public void popularPc(List<Pc> pcs){
-    for(Pc p: pcs){
+    public void popularPc(List<PcDAO> pcs){
+    for(PcDAO p: pcs){
         cbPc.addItem(p);
         }
     }
@@ -183,7 +184,7 @@ public class CriarComponenteView extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCriarComponente;
-    private javax.swing.JComboBox<Pc> cbPc;
+    private javax.swing.JComboBox<PcDAO> cbPc;
     private javax.swing.JTextField edCategoria;
     private javax.swing.JTextField edNome;
     private javax.swing.JTextField edStatus;

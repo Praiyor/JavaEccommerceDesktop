@@ -3,11 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/Pichau/Documents/Projetos/JavaEccommerceDesktop/src/br/udesc/prog2/views/products/CriarPcView.java</file>
             <file>file:/C:/Users/Pichau/Documents/Projetos/JavaEccommerceDesktop/src/br/udesc/prog2/dao/ClienteDAO.java</file>
-            <file>file:/C:/Users/Pichau/Documents/Projetos/JavaEccommerceDesktop/src/br/udesc/prog2/models/workers/Cliente.java</file>
-            <file>file:/C:/Users/Pichau/Documents/Projetos/JavaEccommerceDesktop/src/br/udesc/prog2/main/App.java</file>
-            <file>file:/C:/Users/Pichau/Documents/Projetos/JavaEccommerceDesktop/src/br/udesc/prog2/controller/ControllerListarComponentes.java</file>
-            <file>file:/C:/Users/Pichau/Documents/Projetos/JavaEccommerceDesktop/src/br/udesc/prog2/controller/cadastro/ControllerCadastrarComponente.java</file>
+            <file>file:/C:/Users/Pichau/Documents/Projetos/JavaEccommerceDesktop/src/br/udesc/prog2/views/products/CriarComponenteView.java</file>
         </group>
     </open-files>
 </project-private>
