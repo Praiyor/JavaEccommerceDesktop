@@ -7,6 +7,7 @@ package br.udesc.prog2.views.workers;
 
 import br.udesc.prog2.model.tabel.ComponenteTableModel;
 import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
 import javax.swing.event.TableModelListener;
 
 /**
@@ -26,7 +27,7 @@ public class MontarPcView extends javax.swing.JFrame {
     }
     
     public void adicionarAcaoBtnCriarPcs(ActionListener acao){
-        btnCriarPcs.addActionListener(acao);
+        btnTelaMontarPc.addActionListener(acao);
     }
     public void adicionarAcaoBtnCriarComponentes(ActionListener acao){
         btnCriarComponentes.addActionListener(acao);
@@ -47,6 +48,14 @@ public class MontarPcView extends javax.swing.JFrame {
       public void adicionarEventoAlteracaoTabela(TableModelListener l){
         jTable.getModel().addTableModelListener(l);
     }
+      
+    public void exibirMensagem(String msg){
+        JOptionPane.showMessageDialog(null, msg);
+    }
+      
+    public void exibirTela(){
+        setVisible(true);
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -61,7 +70,7 @@ public class MontarPcView extends javax.swing.JFrame {
         jTable = new javax.swing.JTable();
         btnExcluirItem = new javax.swing.JButton();
         btnCriarComponentes = new javax.swing.JButton();
-        btnCriarPcs = new javax.swing.JButton();
+        btnTelaMontarPc = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -87,7 +96,7 @@ public class MontarPcView extends javax.swing.JFrame {
             }
         });
 
-        btnCriarPcs.setText("Criar Pc");
+        btnTelaMontarPc.setText("Criar Pc");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -98,7 +107,7 @@ public class MontarPcView extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(btnCriarPcs)
+                        .addComponent(btnTelaMontarPc)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 95, Short.MAX_VALUE)
                         .addComponent(btnCriarComponentes)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -114,7 +123,7 @@ public class MontarPcView extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnExcluirItem)
                     .addComponent(btnCriarComponentes)
-                    .addComponent(btnCriarPcs))
+                    .addComponent(btnTelaMontarPc))
                 .addContainerGap())
         );
 
@@ -163,8 +172,8 @@ public class MontarPcView extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCriarComponentes;
-    private javax.swing.JButton btnCriarPcs;
     private javax.swing.JButton btnExcluirItem;
+    private javax.swing.JButton btnTelaMontarPc;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable;
     // End of variables declaration//GEN-END:variables

@@ -5,6 +5,7 @@
  */
 package br.udesc.prog2.main;
 
+import br.udesc.prog2.controller.ControllerManterTudo;
 import br.udesc.prog2.dao.CargoDAO;
 import br.udesc.prog2.dao.ClienteDAO;
 import br.udesc.prog2.dao.FuncionarioDAO;
@@ -34,9 +35,13 @@ public class App {
     private static ArrayList<Produto> produtos = new ArrayList<Produto>();
 
     public static void main(String[] args) {
-//        popularSistema();
-        HomeView homeView = new HomeView();
-        homeView.mostrarTela();           
+        
+        ControllerManterTudo controller = new ControllerManterTudo(new HomeView());
+        controller.exibirTelaInicial();
+        Cliente cliente = new Cliente("Igor");
+                
+       // HomeView homeView = new HomeView();
+       // homeView.mostrarTela();           
         
         //Collections.sort(listaFuncionario, new FuncionarioComparatorNome());
         //System.out.println("Lista De Funcionario ordenada por Nome: \n"+listaFuncionario);
